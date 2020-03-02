@@ -86,7 +86,10 @@ def main():
                 break
 
             except Exception:
-                if failFindNum<5:
+                if driver.find_elements_by_class_name('des'):
+                    print('#'*20,'本日该邮寄方式预约已结束','#'*20)
+                    break
+                elif failFindNum<5:
                     print('第%d次失败，正在进行第%d次查询'%(failFindNum,failFindNum+1))
                     failFindNum += 1
                     time.sleep(0.5)
