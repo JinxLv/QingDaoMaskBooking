@@ -23,7 +23,7 @@ def main():
     txtFile = open("./information.txt", "r",encoding='UTF-8')
     txtList = txtFile.readlines()
     txtList = [x.strip('\n') for x in txtList if x.strip('\n')!='']
-
+    
     infoList = []
     if len(txtList)%7 == 0:
         for i in range(int(len(txtList)/7)):
